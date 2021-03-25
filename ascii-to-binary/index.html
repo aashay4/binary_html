@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="nofollow, noindex">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.min.js" integrity="sha512-7UzDjRNKHpQnkh1Wf1l6i/OPINS9P2DDzTwQNX79JxfbInCXGpgI1RPb3ZD+uTP3O5X7Ke4e0+cxt2TxV7n0qQ==" crossorigin="anonymous"></script>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+    <script type="text/javascript">
+      function texttobinary(){
+        var input = document.getElementById("text_value").value;
+        alert(input);
+            for (var i=0; i < input.length; i++)
+            {
+              var e = input[i].charCodeAt(0);
+              var s = "";
+              do {
+                var a = e % 2;
+                e = (e - a) / 2;
+        s = a + s;
+      }while(e!=0);
+        while(s.length<8) {
+          if(s.length === 7) {
+            s = " 0" + s;
+            document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 6) {
+          s = " 00" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 5) {
+          s = " 000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 4) {
+          s = " 0000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 3) {
+          s = " 00000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+        }
+              }
+            }
+            function reset(){
+              document.getElementById("text_value").innerHTML = "";
+              document.getElementById("ans").innerHTML = " ";
+            }
+    </script>
+  </head>
+  <body>
+    <div class="w3-main" style="margin-left:250px">
+        <div class="w3-row w3-padding-64">
+          <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">ASCII to Binary Converter</h1>
+        <br><br>
+            <p>Enter an ASCII value or a text value into the text box and convert it into the equivalent binary number. For example, enter "Binary" in the text box or any other special character like ";" and get the text to binary conversion with our tool.</p>
+            <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
+            <button onclick="texttobinary()" style="width: 49%">ASCII to Binary</button>
+            <button onclick="reset()" style="width: 49%">clear all fields</button><br><br>
+            <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><b>Conversion:</b><p id="ans"></p> </div><br><br>
+            <div class="w3-row" style="text-align: justify;">
+                <h1 class="w3-text-teal">ASCII</h1>
+                <article>ASCII is nothing but Americal standard code which is often used for the information exchanging. This is a code that represents 128 characters in the English language where each character is assigned a specific number to it. Modern computer systems use these numbers to represent text and it makes easier to transfer data from one register to the another.</article>
+            </div>
+            </div><br>
+          <div class="w3-third w3-container">
+            <h3 style="background-color: silver;">Other Useful Tools</h3>
+            <ul>
+              <router-link to="/">
+              <li>Binary to text</li>
+            </router-link>
+            <router-link to="/decimal-to-binary/">
+              <li>
+                Decimal to Binary
+              </li>
+            </router-link>
+              <router-link to="/binary-to-hexadecimal/">
+              <li>Binary to Hexadecimal</li></router-link>
+              <router-link to="/decimal-to-hexadecimal/">
+              <li>Decimal to Hexadecimal</li></router-link>
+              <router-link to="/decimal-to-octal/">
+              <li>Decimal to Octal</li></router-link>
+              <router-link to="/binary-to-octal/">
+              <li>Binary to Octal</li></router-link>
+              <router-link to="/hexadecimal-to-octal/">
+              <li>Hexadecimal to Octal</li></router-link>
+              <router-link to="/qr-code-generator/">
+              <li>QR Code Generator</li></router-link>
+              <router-link to="/qr-code-reader/">
+              <li>QR Code Reader</li></router-link>
+            </ul><br><br>
+            <h3 style="background-color: silver;">Useful Resources</h3>
+            <ul>
+              <router-link to="/about-creator/">
+              <li>About</li>
+            </router-link>
+              <router-link to="/blog/">
+              <li>Blog</li>
+            </router-link>
+            </ul>
+          </div>
+
+        <div class="w3-row w3-main" style="text-align: justify;">
+          <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">How to Convert ASCII to Binary?</h1>
+              <p>If you want to convert the string "Text" into the binary number then follow these simple steps. Take the first character of the text(it would be "T") string and convert it into the ASCII value. And then convert the ASCII value to the equivalent binary number. The binary number for the string "T" will be 01110100. After the conversion, the number you will get should be of 8-bits, if it is less then 8-bits then add zeros and make it an 8-bits long. After the conversion of a number T, do the same conversion with other numbers, E, X, and the last one T. After completion of the operation, you will get this answer(01010100 01100101 01111000 01110100).</p>
+          </div>
+          <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+          </div>
+        </div>
+        </div>
+        <div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>© 2021</h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <u><b>Lantech Infocom</b></u></p>
+        </div>
+      </footer>
+  </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="nofollow, noindex">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.min.js" integrity="sha512-7UzDjRNKHpQnkh1Wf1l6i/OPINS9P2DDzTwQNX79JxfbInCXGpgI1RPb3ZD+uTP3O5X7Ke4e0+cxt2TxV7n0qQ==" crossorigin="anonymous"></script>
+  <style>
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+  .w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 43px;
+    bottom: 0;
+    height: inherit;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
+  <title></title>
+  <script type="text/javascript">
+    function hextooct() {
+      alert("mm");
+      var mm = document.getElementById("text_value").value;
+      var x = new BigNumber(mm, 16);
+      var dect = x.toString(8).toUpperCase();
+      document.getElementById("ans").innerHTML = dect;
+     }
+     function octtohex() {
+       var mmm = document.getElementById("text_value").value;
+       var xx = new BigNumber(mmm, 8);
+       var dect = xx.toString(16).toUpperCase();
+       document.getElementById("ans").innerHTML = dect;
+      }
+            function reset() {
+ this.ans = '',
+ this.text_value= null,
+ this.anshex= '',
+ this.ansoct= ''
+}
+  </script>
+</head>
+  <body>
+    <div class="w3-main" style="margin-left:250px">
+      <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Hexadecimal to Octal</h1>
+          <Adsense
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6829148792481216"
+        data-ad-slot="1416243045"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+        </Adsense><br><br>
+
+          <p>Convert Hex to octal with the help of this tool. Enter any hexadecimal value into the input box, click on the conversion button and get the answer of your desired number. Enter a hex number "16" and click on the button, you will find out the correct answer in the conversion box. The same way, you can also convert an octal number into the hex number with this tool.</p>
+          <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
+          <button onclick="hextooct()" style="width: 32%">Hexadecimal to Octal</button>
+          <button onclick="octtohex()" style="width: 32%">Octal to Hexadecimal</button>
+          <button onclick="reset()" style="width: 33%">clear all the fields</button><br><br>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
+        </div><br>
+        <div class="w3-third w3-container">
+          <h3 style="background-color: silver;">Other Useful Tools</h3>
+          <ul>
+            <router-link to="/ascii-to-binary/">
+            <li>ASCII to Binary</li>
+          </router-link>
+          <router-link to="/decimal-to-binary/">
+            <li>
+              Decimal to Binary
+            </li>
+          </router-link>
+            <router-link to="/binary-to-hexadecimal/">
+            <li>Binary to Hexadecimal</li></router-link>
+            <router-link to="/decimal-to-hexadecimal/">
+            <li>Decimal to Hexadecimal</li></router-link>
+            <router-link to="/decimal-to-octal/">
+            <li>Decimal to Octal</li></router-link>
+            <router-link to="/binary-to-octal/">
+            <li>Binary to Octal</li></router-link>
+            <router-link to="/hexadecimal-to-octal/">
+            <li>Hexadecimal to Octal</li></router-link>
+            <router-link to="/qr-code-generator/">
+            <li>QR Code Generator</li></router-link>
+            <router-link to="/qr-code-reader/">
+            <li>QR Code Reader</li></router-link>
+          </ul><br><br>
+          <h3 style="background-color: silver;">Useful Resources</h3>
+          <ul>
+            <router-link to="/about-creator/">
+            <li>About</li>
+          </router-link>
+            <router-link to="/blog/">
+            <li>Blog</li>
+          </router-link>
+          </ul>
+        </div>
+      </div>
+      <div class="w3-row" style="text-align: justify;">
+        <div class="w3-twothird w3-container">
+          <table style="width:25%">
+  <tr>
+    <th>Hex</th>
+    <th>Octal</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>13</td>
+  </tr>
+   <tr>
+    <td>C</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>17</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>40</td>
+  </tr>
+   <tr>
+    <td>40</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>400</td>
+  </tr>
+</table><br>
+        </div>
+      </div>
+      <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+  </div>
+  </body>
+</html>

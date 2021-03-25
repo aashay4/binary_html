@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="nofollow, noindex">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.min.js" integrity="sha512-7UzDjRNKHpQnkh1Wf1l6i/OPINS9P2DDzTwQNX79JxfbInCXGpgI1RPb3ZD+uTP3O5X7Ke4e0+cxt2TxV7n0qQ==" crossorigin="anonymous"></script>
+  <style>
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+  .w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 43px;
+    bottom: 0;
+    height: inherit;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
+  <title></title>
+  <script type="text/javascript">
+    function dectofra() {
+        var gcd = function(a, b) {
+    if (!b) return a;
+
+    return gcd(b, a % b);
+  };
+        var fraction = document.getElementById("text_value").value;
+        alert(fraction);
+    var len = fraction.toString().length - 2;
+    var yyy = Math.floor(fraction);
+    var fff = Number(fraction - yyy).toFixed(10)
+
+  var denominator = Math.pow(10, len);
+  var numerator = fff * denominator;
+
+    var divisor = gcd(numerator, denominator);
+
+    numerator /= divisor;
+    denominator /= divisor;
+    document.getElementById("ans").innerHTML = Math.floor(numerator)
+    document.getElementById("ans1").innerHTML = Math.floor(denominator)
+    var hhh = yyy*denominator
+    document.getElementById("aaa").innerHTML = hhh+numerator;
+    alert(aaa)
+              }
+function reset() {
+ this.ans = '',
+ this.text_value= null,
+ this.anshex= '',
+ this.ansoct= ''
+}
+  </script>
+  </head>
+  <body>
+    <div class="w3-main" style="margin-left:250px">
+      <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Decimal to Fraction Calculator</h1>
+          <Adsense
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6829148792481216"
+        data-ad-slot="1416243045"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+        </Adsense><br><br>
+          <p>Easily convert decimal to fraction with this free tool. Just enter numbers and convert it into the fraction quickly.</p><br>
+          <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
+          <button onclick="dectofra()" style="width: 49%">Decimal to Fraction</button>
+          <button v-on:click="reset()" style="width: 49%">clear all the fields</button><br><br>
+          <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">
+              <table>
+                <tr>
+                    <td id="yyyy"></td>
+                  <td id="ans"></td>
+                </tr>
+                <tr>
+                  <td id="ans1" class="w3-border-top"></td>
+                </tr>
+              </table>
+                </div>
+            </div><br>
+        <div class="w3-third w3-container">
+          <h3 style="background-color: silver;">Other Useful Tools</h3>
+          <ul>
+            <router-link to="/">
+              <li>
+                Binary to Text
+              </li>
+            </router-link>
+            <router-link to="/ascii-to-binary/">
+            <li>ASCII to Binary</li>
+          </router-link>
+          <router-link to="/binary-to-decimal/">
+          <li>Binary to Decimal</li>
+        </router-link>
+            <router-link to="/binary-to-hexadecimal/">
+            <li>Binary to Hexadecimal</li></router-link>
+            <router-link to="/decimal-to-hexadecimal/">
+            <li>Decimal to Hexadecimal</li></router-link>
+            <router-link to="/decimal-to-octal/">
+            <li>Decimal to Octal</li></router-link>
+            <router-link to="/binary-to-octal/">
+            <li>Binary to Octal</li></router-link>
+            <router-link to="/hexadecimal-to-octal/">
+            <li>Hexadecimal to Octal</li></router-link>
+            <router-link to="/qr-code-generator/">
+            <li>QR Code Generator</li></router-link>
+            <router-link to="/qr-code-reader/">
+            <li>QR Code Reader</li></router-link>
+          </ul><br><br>
+          <h3 style="background-color: silver;">Useful Resources</h3>
+          <ul>
+            <router-link to="/about-creator/">
+            <li>About</li>
+          </router-link>
+            <router-link to="/blog/">
+            <li>Blog</li>
+          </router-link>
+          </ul>
+        </div>
+      </div>
+      <div class="w3-row w3-padding-64" style="text-align: justify;">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">How to convert Decimal to Fraction?</h1>
+          <p>Converting the decimal values to fractions is quite simple. Let's understand it with an example. For example, if you want to convert 0.444 into the fraction then first of all remove the decimal numbering from this original number. So, after removing the decimal number, the number will look like 444/1000 or 444 divided by 100. Simplify the fraction value. So, in the first step, divide the equation by 2. You will get 222/500. In the second step, divide it with 2 again. So that equation will be 111/250. So, the final decimal to fraction conversion of the number 0.444 will be 111/250.</p>
+        </div>
+      </div>
+      <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+  </div>
+  </body>
+</html>

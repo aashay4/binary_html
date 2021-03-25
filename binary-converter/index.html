@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>22 in binary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="nofollow, noindex">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.min.js" integrity="sha512-7UzDjRNKHpQnkh1Wf1l6i/OPINS9P2DDzTwQNX79JxfbInCXGpgI1RPb3ZD+uTP3O5X7Ke4e0+cxt2TxV7n0qQ==" crossorigin="anonymous"></script>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+z-index: 3;
+width: 250px;
+top: 43px;
+bottom: 0;
+height: inherit;
+}
+#box {
+background-color: lightgrey;
+ width: 300px;
+ border: 5px solid gray;
+ padding: 10%;
+ margin-left: 30%;
+
+}
+</style>
+<script type="text/javascript">
+  function binarytotext(){
+    var binaryinput1 = document.getElementById("text_value1").value;
+    //document.getElementById("ans").innerHTML = "Html";
+    var bintext, textresult="", binlength;
+        var aaa = binaryinput1;
+        bintext = aaa.replace(/[^01]/g, "");
+			binlength = bintext.length-(bintext.length%8);
+			for(var z=0; z<binlength; z=z+8) {
+				textresult += String.fromCharCode(parseInt(bintext.substr(z,8),2));
+                                document.getElementById("ans1").innerHTML = textresult;
+        }
+  }
+  function texttobinary(){
+    var binaryinput1 = document.getElementById("text_value").value;
+    for (var i=0; i < binaryinput1.length; i++)
+            {
+              var e = binaryinput1[i].charCodeAt(0);
+              var s = "";
+              do {
+                var a = e % 2;
+                e = (e - a) / 2;
+        s = a + s;
+      }while(e!=0);
+        while(s.length<8) {
+          if(s.length === 7) {
+            s = " 0" + s;
+            document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 6) {
+          s = " 00" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 5) {
+          s = " 000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 4) {
+          s = " 0000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 3) {
+          s = " 00000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+        }
+              }
+  }
+  function bintodec() {
+    var dddd = document.getElementById("text_value1").value;
+      var fa = parseInt(dddd)
+      var cc = new BigNumber(parseInt(dddd, 2))
+      if (isNaN(cc)) {
+        document.getElementById("ans2").innerHTML = "This number cannot be converted into Decimal";
+      } else {
+        document.getElementById("ans2").innerHTML = cc;
+      }
+    }
+    function bintooct() {
+    var xxx = document.getElementById("text_value1").value;
+    var bintooct = parseInt(xxx, 2).toString(8)
+    if (isNaN(bintooct)) {
+      document.getElementById("ans3").innerHTML = "This number cannot be converted into Octal";
+    } else {
+      document.getElementById("ans3").innerHTML = bintooct;
+    }
+  }
+  function bintohex() {
+    var binnn = document.getElementById("text_value1").value;
+var mol = new BigNumber(binnn, 2)
+var binnx = mol.toString(16)
+if (isNaN(binnx)) {
+document.getElementById("ans4").innerHTML = "This number cannot be converted into Hex";
+} else {
+document.getElementById("ans4").innerHTML = binnx;
+}
+    }
+</script>
+</head>
+  <body>
+    <div class="w3-main" style="margin-left:250px">
+      <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Binary Converter</h1>
+          <p>Full Binary converter, Enter a binary value and click on the button. You will get from binary to hex, dec, oct and text values.</p>
+            <div>
+              <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 932px;"><br><br>
+              <input type="text" id="text_value1" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
+              <button onclick="binarytotext(); bintodec(); bintooct(); bintohex();" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Convert</button>
+              <button onclick="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset All Fields</button><br><br>
+                <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans1"><b>To text Translation:</b></p><br><br><br><br>
+                <h3><b>to Dec - Base-10</b></h3>
+                  <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans2"><b>Translation:</b> {{ btod }}</p>
+                  <h3><b>to Oct - Base-8</b></h3>
+                    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans3"><b>Translation:</b> {{ btoo }}</p>
+                    <h3><b>to Hex - Base-16</b></h3>
+                      <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans4"><b>Translation:</b> {{ btoh }}</p>
+            </div>
+          </div>
+        </div><br>
+        <div class="w3-third w3-container">
+          <h3 style="background-color: silver;">Other Useful Tools</h3>
+          <ul>
+            <router-link to="/ascii-to-binary/">
+            <li>ASCII to Binary</li>
+          </router-link>
+          <router-link to="/decimal-to-binary/">
+            <li>
+              Decimal to Binary
+            </li>
+          </router-link>
+            <router-link to="/decimal-to-binary/">
+            <li>Decimal to Binary Converter</li></router-link>
+            <router-link to="/decimal-to-hexadecimal/">
+            <li>Decimal to Hexadecimal</li></router-link>
+            <router-link to="/decimal-to-octal/">
+            <li>Decimal to Octal</li></router-link>
+            <router-link to="/octal-to-binary/">
+            <li>Octal to Binary Converter</li></router-link>
+              <router-link to="/hexadecimal-to-binary-converter/">
+              <li>Hexadecimal to Binary Converter</li></router-link>
+              <router-link to="/hexadecimal-to-octal/">
+            <li>Hexadecimal to Octal</li></router-link>
+            <router-link to="/qr-code-generator/">
+            <li>QR Code Generator</li></router-link>
+            <router-link to="/qr-code-reader/">
+            <li>QR Code Reader</li></router-link>
+          </ul><br><br>
+          <h3 style="background-color: silver;">Useful Resources</h3>
+          <ul>
+            <router-link to="/about-creator/">
+            <li>About</li>
+          </router-link>
+            <router-link to="/blog/">
+            <li>Blog</li>
+          </router-link>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w3-row" style="text-align: justify;">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">How to Use this Binary Converter?</h1>
+            <p>To use this 01100010 01101001 01101110 01100001 01110010 01111001 onverter, just enter the binary numbers in the box above and click on the convert button, you will get the answers for the given number in just a few seconds. The number entered by you will be converted into dec, oct, hex and text values. If the numbers cannot be converted then you will receinve a message for the same.</p>
+        </div>
+      </div>
+      <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+  </div>
+  </body>
+</html>
