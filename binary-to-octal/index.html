@@ -2,8 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>2 in binary</title>
+  <title>Binary to Octal Converter | Best Online Tool for Conversion</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Looking for a binary to octal converter? Try our online converter totally for free.">
+<link rel="canonical" href="https://binarytotext.net/binary-to-octal/">
+<link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <meta name="robots" content="nofollow, noindex">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -39,6 +42,10 @@ table, th, td {
     var output = parseInt(input, 2).toString(8);
          document.getElementById("ans").innerHTML = output;
        }
+       function reset() {
+         document.getElementById("ans").innerHTML = "";
+         document.getElementById("text_value").value = "";
+       }
 </script>
 </head>
   <body>
@@ -49,8 +56,8 @@ table, th, td {
           <p>Want to convert Binary to Octal value? Enter the desired binary number below and click on the button to get the conversion of a binary number into the octal base - 8 number. Enter numbers like 1110, 110100 or 11010 here and find out the equivalent octal values of these numbers. Same way you can enter the base - 8 values to find out the zeros and ones values of those numbers.</p>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
           <button onclick="bintooct()" style="width: 49%">Binary to Octal</button>
-          <button v-on:click="reset()" style="width: 49%">clear all the fields</button><br><br>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans">Conversion:</b></p>
+          <button onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
         </div><br>
         <div class="w3-third w3-container">
           <h3 style="background-color: silver;">Other Useful Tools</h3>

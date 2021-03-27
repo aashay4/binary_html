@@ -2,8 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>2 in binary</title>
+  <title>Binary to Hexadecimal Converter | Convert binary to hex</title>
+  <meta name="description" content="Binary to hex converter. The simplest online translator of binary to hexadecimal conversions. Visit here and get answers!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://binarytotext.net/binary-to-hexadecimal/">
+  <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <meta name="robots" content="nofollow, noindex">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -49,8 +52,14 @@ table, th, td {
 
        var bin = document.getElementById("text_value").value;
        var m = new BigNumber(bin, 2)
-       var binn = m.toString(16);
+       var binn = m.toString(16).toUpperCase();
        document.getElementById("ans1").innerHTML = binn;
+     }
+     function reset() {
+       document.getElementById("text_value").value = "";
+       document.getElementById("ans").innerHTML = "";
+       document.getElementById("ans1").innerHTML = "";
+       document.getElementById("ans2").innerHTML = "";
      }
 </script>
 </head>
@@ -60,15 +69,15 @@ table, th, td {
         <div class="w3-twothird w3-container">
           <h1 class="w3-text-teal">Convert Binary to Decimal</h1>
           <p>You can convert binary to decimal with the help of this tool. Enter zeros and ones into the text box and get decimal digits as an output. For example, enter 101100 binary number into text area and get "101100" answer in the other box. Same way, your inserted values will be updated into the real-time converter and you will get correct answers for the base 8 and base 16 conversions as well. Just enter any value and get started using our tool.</p><br>
-          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 623px;"><br>
+          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 710px;"><br>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
           <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="bintodec(); bintooct(); bintohex();" style="width: 49%">Binary to Decimal</button>
           <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans">Conversion:</b></p>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
             <h3><b>to base-8</b></h3>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans2">Conversion:</b></p>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans2"></b></p>
             <h3><b>to base-16</b></h3>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans1">Conversion:</b></p>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans1"></b></p>
           </div>
         </div><br>
         <div class="w3-third w3-container">

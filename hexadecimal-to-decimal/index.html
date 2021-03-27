@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="nofollow, noindex">
+  <meta name="description" content="Get an answer from hexadecimal to decimal converter. Read the table and find out hex to decimal conversion.">
+  <link rel="canonical" href="https://binarytotext.net/hexadecimal-to-decimal/">
+  <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -21,7 +24,7 @@
     border: 1px solid black;
   }
   </style>
-  <title></title>
+  <title>Hexadecimal to Decimal Converter | Hex to Decimal online</title>
   <script type="text/javascript">
     function hextodec() {
       var mm = document.getElementById("text_value").value;
@@ -36,10 +39,9 @@
        document.getElementById("ans1").innerHTML = dect;
       }
             function reset() {
- this.ans = '',
- this.text_value= null,
- this.anshex= '',
- this.ansoct= ''
+ document.getElementById("text_value").value = "";
+ document.getElementById("ans").innerHTML = "";
+ document.getElementById("ans1").innerHTML = "";
 }
   </script>
 </head>
@@ -68,7 +70,7 @@
           <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 500px;"><br>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
           <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="hextodec(); hextobin();" style="width: 49%">Hexadecimal to Decimal</button>
-          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" v-on:click="reset()" style="width: 49%">clear all the fields</button><br><br>
+          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
           <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
           <h3><b>to binary</b></h3>
           <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans1"> </b></p>

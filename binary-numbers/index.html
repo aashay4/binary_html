@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>2 in binary</title>
+  <title>Everything about binary numbers</title>
+  <meta name="description" content="Get to know everything about binary numbers. Binary numbers conversion, history and used by every other electronic system.">
+  <link rel="canonical" href="https://binarytotext.net/binary-numbers/" />
+  <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="nofollow, noindex">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,6 +42,10 @@ function dectobin() {
     var x = new BigNumber(asd, 10)
   var dectobin = x.toString(2);
   document.getElementById("ans").innerHTML = dectobin;
+}
+function reset(){
+  document.getElementById("ans").innerHTML = "";
+  document.getElementById("text_value").value = "";
 }
 </script>
 </head>

@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Binary to text</title>
+    <title>Binary to Text Converter (Binary translator)</title>
+    <meta name="description" content="A binary to text converter and also binary translator. Just enter a binary code and convert it into the equivalent text values with this free binary code translator. Same for text to binary conversion.">
+    <link rel="canonical" href="https://binarytotext.net/">
+    <link rel="shortcut icon" type="image/jpg" href="./favicon1.ico"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="nofollow, noindex">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -34,8 +37,15 @@ function binarytotext1(){
       }
 }
 function reset(){
-  document.getElementById("text_value").innerHTML = "";
+  document.getElementById("text_value").value = "";
   document.getElementById("ans").innerHTML = " ";
+}
+function reset1(){
+  document.getElementById("text_value1").value = "";
+  document.getElementById("ans1").innerHTML = " ";
+  document.getElementById("ans2").innerHTML = " ";
+  document.getElementById("ans3").innerHTML = " ";
+  document.getElementById("ans4").innerHTML = " ";
 }
   function binarytotext(){
     var binaryinput1 = document.getElementById("text_value1").value;
@@ -128,7 +138,7 @@ If you want to convert text to binary, then enter any text into the text box and
           <button onclick="binarytotext1()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" id="binaryinput" style="display: inline-block">Binary to Text</button>
           <button onclick="texttobinary()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Text to Binary</button>
           <button onclick="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset</button><br><br>
-          <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><b>Conversion:</b><p id="ans"></p> </div><br><br>
+          <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Conversion:<b id="ans"></b> </div><br><br>
           </div>
             <h1 class="w3-text-teal">Binary Translator</h1>
             <div>
@@ -136,14 +146,14 @@ If you want to convert text to binary, then enter any text into the text box and
               <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 932px;"><br><br>
               <input type="text" id="text_value1" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
               <button onclick="binarytotext(); bintodec(); bintooct(); bintohex();" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Convert</button>
-              <button v-on:click="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset All Fields</button><br><br>
-                <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans1"><b>To text Translation:</b></p><br><br><br><br>
+              <button onclick="reset1()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset All Fields</button><br><br>
+                <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">To text Translation:<b id="ans1"></b></p><br><br><br><br>
                 <h3><b>to Dec - Base-10</b></h3>
-                  <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans2"><b>Translation:</b> {{ btod }}</p>
+                  <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans2"></b></p>
                   <h3><b>to Oct - Base-8</b></h3>
-                    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans3"><b>Translation:</b> {{ btoo }}</p>
+                    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans3"></b></p>
                     <h3><b>to Hex - Base-16</b></h3>
-                      <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans4"><b>Translation:</b> {{ btoh }}</p>
+                      <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans4"></b></p>
             </div>
           </div>
         </div><br>

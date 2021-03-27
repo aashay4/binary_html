@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>22 in binary</title>
+    <meta name="description" content="Find out the answer of the number 22 in binary. Use out tool and convert any number in binary easily. The correct answer of 22: 10110. Find the answer for other decimal digits as well.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="nofollow, noindex">
+<link rel="canonical" href="https://binarytotext.net/22inbinary/">
+<link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -36,6 +39,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     var dectobin = x.toString(2);
     document.getElementById("ans").innerHTML = dectobin;
   }
+  function reset() {
+    document.getElementById("ans").innerHTML = "";
+    document.getElementById("text_value").value = "";
+  }
 </script>
   </head>
   <body>
@@ -46,8 +53,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 376px;"><br>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="22"/><br><br>
           <button onclick="dectobin()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">In Binary</button>
-          <button v-on:click="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset</button><br><br>
-            <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><b id="ans">Conversion: 10110</b></div><br><br>
+          <button onclick="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset</button><br><br>
+            <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Conversion: <b id="ans">10110</b></div><br><br>
           </div>
           <p>The Conversion of 22 in binary is : 10110</p>
         </div><br>

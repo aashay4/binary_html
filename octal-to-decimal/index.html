@@ -2,8 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>2 in binary</title>
+  <title>An online Octal to Decimal Converter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Enter an octal base 8 number in the box and convert it into the decimal number with this octal to decimal translator.">
+<link rel="canonical" href="https://binarytotext.net/octal-to-decimal/">
+<link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <meta name="robots" content="nofollow, noindex">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -38,6 +41,10 @@ function octtodec() {
     var x = new BigNumber(asd, 8)
   var dectobin = x.toString(10);
   document.getElementById("ans").innerHTML = dectobin;
+}
+function reset() {
+  document.getElementById("text_value").value = "";
+  document.getElementById("ans").innerHTML = "";
 }
 </script>
 </head>

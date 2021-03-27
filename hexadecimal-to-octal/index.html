@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="nofollow, noindex">
+  <meta name="description" content="Convert hexadecimal to octal numbers very easily with the help of our number converter. You can also convert octal to the hex numbers.">
+  <link rel="canonical" href="https://binarytotext.net/hexadecimal-to-octal/">
+  <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -21,10 +24,9 @@
     border: 1px solid black;
   }
   </style>
-  <title></title>
+  <title>Hexadecimal to Octal | Tool for Base 16 to 8 Number</title>
   <script type="text/javascript">
     function hextooct() {
-      alert("mm");
       var mm = document.getElementById("text_value").value;
       var x = new BigNumber(mm, 16);
       var dect = x.toString(8).toUpperCase();
@@ -37,10 +39,9 @@
        document.getElementById("ans").innerHTML = dect;
       }
             function reset() {
- this.ans = '',
- this.text_value= null,
- this.anshex= '',
- this.ansoct= ''
+ document.getElementById("text_value").value = "";
+
+document.getElementById("ans").innerHTML = "";
 }
   </script>
 </head>

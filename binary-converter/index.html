@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>22 in binary</title>
+  <title>Binary Converter, Convert from binary to dec, hex, oct and text values.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://binarytotext.net/binary-converter/" />
+<link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <meta name="robots" content="nofollow, noindex">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -105,6 +107,14 @@ document.getElementById("ans4").innerHTML = "This number cannot be converted int
 document.getElementById("ans4").innerHTML = binnx;
 }
     }
+    function reset() {
+//      document.getElementById("ans").innerHTML = "";
+      document.getElementById("ans1").innerHTML = "";
+      document.getElementById("ans2").innerHTML = "";
+      document.getElementById("ans3").innerHTML = "";
+      document.getElementById("ans4").innerHTML = "";
+      document.getElementById("text_value1").value = "";
+    }
 </script>
 </head>
   <body>
@@ -120,11 +130,11 @@ document.getElementById("ans4").innerHTML = binnx;
               <button onclick="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset All Fields</button><br><br>
                 <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans1"><b>To text Translation:</b></p><br><br><br><br>
                 <h3><b>to Dec - Base-10</b></h3>
-                  <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans2"><b>Translation:</b> {{ btod }}</p>
+                  <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans2"></b></p>
                   <h3><b>to Oct - Base-8</b></h3>
                     <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans3"><b>Translation:</b> {{ btoo }}</p>
                     <h3><b>to Hex - Base-16</b></h3>
-                      <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;" id="ans4"><b>Translation:</b> {{ btoh }}</p>
+                      <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><b id="ans4">Translation:</b></div>
             </div>
           </div>
         </div><br>

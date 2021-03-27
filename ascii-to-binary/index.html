@@ -2,9 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
+    <title>ASCII text to binary zeros and ones converter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="nofollow, noindex">
+<meta name="description" content="Convert ASCII to binary numbers. Visit this free tool and convert text to binary in the least amount of time.">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="canonical" href="https://binarytotext.net/ascii-to-binary/">
+<link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +26,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <script type="text/javascript">
       function texttobinary(){
         var input = document.getElementById("text_value").value;
-        alert(input);
             for (var i=0; i < input.length; i++)
             {
               var e = input[i].charCodeAt(0);
@@ -57,8 +60,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
               }
             }
             function reset(){
-              document.getElementById("text_value").innerHTML = "";
-              document.getElementById("ans").innerHTML = " ";
+              document.getElementById("text_value").value = "";
+              document.getElementById("ans").innerHTML = "";
             }
     </script>
   </head>
@@ -72,7 +75,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
             <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
             <button onclick="texttobinary()" style="width: 49%">ASCII to Binary</button>
             <button onclick="reset()" style="width: 49%">clear all fields</button><br><br>
-            <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><b>Conversion:</b><p id="ans"></p> </div><br><br>
+            <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><p>Conversion:<b id="ans"></b></b> </div><br><br>
             <div class="w3-row" style="text-align: justify;">
                 <h1 class="w3-text-teal">ASCII</h1>
                 <article>ASCII is nothing but Americal standard code which is often used for the information exchanging. This is a code that represents 128 characters in the English language where each character is assigned a specific number to it. Modern computer systems use these numbers to represent text and it makes easier to transfer data from one register to the another.</article>

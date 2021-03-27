@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Decimal to binary converter helps you to convert decimal to binary easily. Enter decimal numbers and get answers easily.">
     <meta name="robots" content="nofollow, noindex">
+    <link rel="canonical" href="https://binarytotext.net/decimal-to-binary/">
+    <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -21,7 +24,7 @@
       border: 1px solid black;
     }
     </style>
-    <title></title>
+    <title>Decimal to Binary Calculator (Convert Numbers to Binary)</title>
     <script type="text/javascript">
     function dectobin() {
       var xx = document.getElementById("text_value").value;
@@ -42,10 +45,10 @@
                   document.getElementById("ans2").innerHTML = dectoocto;
                           }
  function reset() {
-   this.ans = '',
-   this.text_value= null,
-   this.anshex= '',
-   this.ansoct= ''
+   document.getElementById("text_value").value = "";
+   document.getElementById("ans").innerHTML = "";
+   document.getElementById("ans1").innerHTML = "";
+   document.getElementById("ans2").innerHTML = "";
  }
     </script>
   </head>
@@ -59,11 +62,11 @@
   <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
   <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="dectobin(); dectohex(); dectooct();" style="width: 49%">Decimal to Binary</button>
   <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
-    <p class="w3-border w3-padding-large w3-padding-32 w3-right" id="ans" style="width: 100%; overflow: scroll">Conversion:</p>
+    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion: <b id="ans"></b> </p>
     <h3><b>to base-8</b></h3>
-    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans1">Conversion:</b></p>
+    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans2"></b></p>
     <h3><b>to base-16</b></h3>
-    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans2">Conversion:</b></p>
+    <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans1"></b></p>
   </div>
         </div><br>
         <div class="w3-third w3-container">

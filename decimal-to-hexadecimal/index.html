@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="nofollow, noindex">
+  <meta name="description" content="Best decimal to hexadecimal converter. Get the answers about the conversions and learn how to convert decimal number to a hexadecimal.">
+  <link rel="canonical" href="https://binarytotext.net/decimal-to-hexadecimal/">
+  <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -21,7 +24,7 @@
     border: 1px solid black;
   }
   </style>
-  <title></title>
+  <title>Decimal to Hexadecimal Converter | Dec to Hex Translator Online</title>
   <script type="text/javascript">
   function dectohex() {
     var xxx = document.getElementById("text_value").value;
@@ -30,10 +33,8 @@
         document.getElementById("ans").innerHTML = dectohexo;
                 }
             function reset() {
- this.ans = '',
- this.text_value= null,
- this.anshex= '',
- this.ansoct= ''
+ document.getElementById("text_value").value = "",
+document.getElementById("ans").innerHTML = "";
 }
   </script>
 </head>
@@ -61,8 +62,8 @@
           <p>Converting decimal to hexadecimal number is not a difficult task anymore. You can use our free tool for conversion. Enter a decimal value into the text box if you want to convert decimal to hex and click on the button to get the correct conversion. For example, enter "8888" and click on the conversion button and you will get "22B8" answer.</p>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
           <button onclick="dectohex()" style="width: 49%">Decimal to Hexadecimal</button>
-          <button v-on:click="reset()" style="width: 49%">clear all the fields</button><br><br>
-          <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans">Conversion: </b></p>
+          <button onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
+          <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
         </div><br>
         <div class="w3-third w3-container">
           <h3 style="background-color: silver;">Other Useful Tools</h3>

@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="nofollow, noindex">
+  <meta name="description" content="Convert hexadecimal to binary numbers with this tool. Enter a hex number and get the equivalent base 2 number easily with this amazing tool.">
+  <link rel="canonical" href="https://binarytotext.net/hexadecimal-to-binary-converter/">
+  <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -21,7 +24,7 @@
     border: 1px solid black;
   }
   </style>
-  <title></title>
+  <title>Hex to binary converter | convert base 16 to zeros and ones</title>
   <script type="text/javascript">
     function hextobin() {
       var mm = document.getElementById("text_value").value;
@@ -30,10 +33,9 @@
       document.getElementById("ans").innerHTML = dect;
      }
             function reset() {
- this.ans = '',
- this.text_value= null,
- this.anshex= '',
- this.ansoct= ''
+ document.getElementById("text_value").value = "";
+ document.getElementById("ans").innerHTML = "";
+
 }
   </script>
 </head>
@@ -51,11 +53,11 @@
         data-full-width-responsive="true">
         </Adsense><br><br>
           <p>Use this hexadecimal to binary converter to convert any base-16 hex number into the zeros and ones. Enter a hex number value into the box and convert that hex number into the correct binary number with ease. Hex numbers contain 0-9 in numbers and A-z in letters. Just for an example, enter "4444" into text area and click on the convert button, you will get "100010001000100" answer in the conversion box.</p><br>
-          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 323px;"><br>
+          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 350px;"><br>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
           <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="hextobin()" style="width: 49%">Hexadecimal to binary</button>
-          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" v-on:click="reset()" style="width: 49%">clear all the fields</button><br><br>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll"><b id="ans">Conversion:</b></p>
+          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
           </div>
         </div><br>
         <div class="w3-third w3-container">
