@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Everything about binary numbers</title>
+  <title>Binary numbers</title>
   <meta name="description" content="Get to know everything about binary numbers. Binary numbers conversion, history and used by every other electronic system.">
   <link rel="canonical" href="https://binarytotext.net/binary-numbers/" />
   <link rel="shortcut icon" type="image/jpg" href="../favicon1.ico"/>
@@ -14,6 +14,107 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.min.js" integrity="sha512-7UzDjRNKHpQnkh1Wf1l6i/OPINS9P2DDzTwQNX79JxfbInCXGpgI1RPb3ZD+uTP3O5X7Ke4e0+cxt2TxV7n0qQ==" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function binarytotext1(){
+  var binaryinput1 = document.getElementById("text_value").value;
+  //document.getElementById("ans").innerHTML = "Html";
+  var bintext, textresult="", binlength;
+      var aaa = binaryinput1;
+      bintext = aaa.replace(/[^01]/g, "");
+    binlength = bintext.length-(bintext.length%8);
+    for(var z=0; z<binlength; z=z+8) {
+      textresult += String.fromCharCode(parseInt(bintext.substr(z,8),2));
+                              document.getElementById("ans").innerHTML = textresult;
+      }
+}
+function reset(){
+  document.getElementById("text_value").value = "";
+  document.getElementById("ans").innerHTML = " ";
+}
+function reset1(){
+  document.getElementById("text_value1").value = "";
+  document.getElementById("ans1").innerHTML = " ";
+  document.getElementById("ans2").innerHTML = " ";
+  document.getElementById("ans3").innerHTML = " ";
+  document.getElementById("ans4").innerHTML = " ";
+}
+  function binarytotext(){
+    var binaryinput1 = document.getElementById("text_value1").value;
+    //document.getElementById("ans").innerHTML = "Html";
+    var bintext, textresult="", binlength;
+        var aaa = binaryinput1;
+        bintext = aaa.replace(/[^01]/g, "");
+      binlength = bintext.length-(bintext.length%8);
+      for(var z=0; z<binlength; z=z+8) {
+        textresult += String.fromCharCode(parseInt(bintext.substr(z,8),2));
+                                document.getElementById("ans1").innerHTML = textresult;
+        }
+  }
+  function texttobinary(){
+    var binaryinput1 = document.getElementById("text_value").value;
+    for (var i=0; i < binaryinput1.length; i++)
+            {
+              var e = binaryinput1[i].charCodeAt(0);
+              var s = "";
+              do {
+                var a = e % 2;
+                e = (e - a) / 2;
+        s = a + s;
+      }while(e!=0);
+        while(s.length<8) {
+          if(s.length === 7) {
+            s = " 0" + s;
+            document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 6) {
+          s = " 00" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 5) {
+          s = " 000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 4) {
+          s = " 0000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+          if(s.length === 3) {
+          s = " 00000" + s;
+          document.getElementById("ans").innerHTML += s;
+          }
+        }
+              }
+  }
+  function bintodec() {
+    var dddd = document.getElementById("text_value1").value;
+      var fa = parseInt(dddd)
+      var cc = new BigNumber(parseInt(dddd, 2))
+      if (isNaN(cc)) {
+        document.getElementById("ans2").innerHTML = "This number cannot be converted into Decimal";
+      } else {
+        document.getElementById("ans2").innerHTML = cc;
+      }
+    }
+    function bintooct() {
+    var xxx = document.getElementById("text_value1").value;
+    var bintooct = parseInt(xxx, 2).toString(8)
+    if (isNaN(bintooct)) {
+      document.getElementById("ans3").innerHTML = "This number cannot be converted into Octal";
+    } else {
+      document.getElementById("ans3").innerHTML = bintooct;
+    }
+  }
+  function bintohex() {
+    var binnn = document.getElementById("text_value1").value;
+var mol = new BigNumber(binnn, 2)
+var binnx = mol.toString(16)
+if (isNaN(binnx)) {
+document.getElementById("ans4").innerHTML = "This number cannot be converted into Hex";
+} else {
+document.getElementById("ans4").innerHTML = binnx;
+}
+    }
+</script>
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 .w3-sidebar {
@@ -53,7 +154,7 @@ function reset(){
     <div class="w3-main" style="margin-left:250px">
     <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
-          <h1 class="w3-text-teal">8, 1, 16, 12, 100, 5, 7, 128, 42, 15, 256, 64, 11, 9, 20, 14, 32, 25 in binary numbers</h1>
+          <h1 class="w3-text-teal">Binary numbers</h1>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Aab2th -->
 <ins class="adsbygoogle"
@@ -65,25 +166,21 @@ function reset(){
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script><br><br>
-          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 376px;"><br>
-          <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="8, 1, 16, 12, 100, 5, 7, 128, 42, 15, 256, 64, 11, 9, 20, 14, 32, 25"/><br><br>
-          <button onclick="dectobin()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">In Binary</button>
-          <button onclick="reset()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset</button><br><br>
-            <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><b id="ans">Conversion:</b></div><br><br>
-          </div>
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Aab2th -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6829148792481216"
-     data-ad-slot="1416243045"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script><br><br>
+          <p>Binary numbers consist of just zeros and ones are used by a huge number of electronic devices and computer systems. Since binary numbers just include zeros and ones, it is really easy for the computer systems to process them. Along with that, these numbers are also the fastest among the other numbers. For that reason, it is used by a huge number of motherboards and systems. Not only that, but binary numbers are also used in the electronic logic gates like ADN, OR, NAND, NOR, and many others.</p><p>Since binary numbers consist of just zeros and ones, it is really difficult for humans to read these numbers. So, computer systems first convert the text values in the binary, and then when it is ready with the response, it converts binary to text and shows it to the users. Along with that, binary numbers occupy a lot of space on the device since the numbers are too long and eventually it ends up occupying a lot of space on the device.</p>
           <h2 class="w3-text-teal">Numbers to Binary Numbers Conversion</h2>
           <p>Just enter decimal numbers in the box, click on the convert button, and get these numbers converted into the equivalent binary numbers in the least amount of time.</p>
+          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 932px;"><br><br>
+          <input type="text" id="text_value1" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
+          <button onclick="binarytotext(); bintodec(); bintooct(); bintohex();" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Convert</button>
+          <button onclick="reset1()" class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" style="display: inline-block">Reset All Fields</button><br><br>
+            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">To text Translation:<b id="ans1"></b></p><br><br><br><br>
+            <h3><b>to Dec - Base-10</b></h3>
+              <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans2"></b></p>
+              <h3><b>to Oct - Base-8</b></h3>
+                <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans3"></b></p>
+                <h3><b>to Hex - Base-16</b></h3>
+                  <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;">Translation:<b id="ans4"></b></p>
+          </div>
           <table style="width:25%">
   <tr>
     <th>Simple Number</th>
@@ -162,8 +259,6 @@ function reset(){
     <td>11001</td>
   </tr>
 </table>
-          <h2 class="w3-text-teal">About Binary Numbers</h2>
-          <p>Binary numbers consist of just zeros and ones and used by a huge number of electronic devices and computer systems. Since binary numbers just include zeros and ones, it is really easy for the computer systems to process it. Along with that, these numbers are also the fastest among the other numbers. For that reason, it is used by a huge number of motherboards and systems. Not only that, but binary numbers are also used in the electronic logic gates like ADN, OR, NAND, NOR, and many others.</p><p>Since binary numbers consist of just zeros and ones, it is really difficult for humans to read these numbers. So, computer systems first convert the text values in the binary, and then when it is ready with the response, it converts binary to text and shows it to the users. Along with that, binary numbers occupy a lot of space on the device since the numbers are too long and eventually it ends up occupying a lot of space on the device.</p>
         </div><br>
         <div class="w3-third w3-container">
           <h3 style="background-color: silver;">Other Useful Tools</h3>

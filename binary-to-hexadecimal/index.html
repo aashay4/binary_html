@@ -37,29 +37,22 @@ table, th, td {
 </style>
 <script type="text/javascript">
 
-  function bintodec() {
-    var input = document.getElementById("text_value").value;
-        var cc = new BigNumber(input, 2);
-         document.getElementById("ans").innerHTML = cc;
-       }
-      function bintooct(){
-        var aaa = document.getElementById("text_value").value;
-        var xxxxx = parseInt(aaa);
-               var bintooct = parseInt(xxxxx, 2).toString(8);
-               document.getElementById("ans2").innerHTML = bintooct;
-      }
+  function hextobin(){
+    var bin = document.getElementById("text_value").value;
+    var m = new BigNumber(bin, 16)
+    var binn = m.toString(2).toUpperCase();
+    document.getElementById("ans").innerHTML = binn;
+  }
       function bintohex() {
 
        var bin = document.getElementById("text_value").value;
        var m = new BigNumber(bin, 2)
        var binn = m.toString(16).toUpperCase();
-       document.getElementById("ans1").innerHTML = binn;
+       document.getElementById("ans").innerHTML = binn;
      }
      function reset() {
        document.getElementById("text_value").value = "";
        document.getElementById("ans").innerHTML = "";
-       document.getElementById("ans1").innerHTML = "";
-       document.getElementById("ans2").innerHTML = "";
      }
 </script>
 </head>
@@ -79,17 +72,14 @@ table, th, td {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script><br>
-          <p>You can convert binary to decimal with the help of this tool. Enter zeros and ones into the text box and get decimal digits as an output. For example, enter 101100 binary number into text area and get "101100" answer in the other box. Same way, your inserted values will be updated into the real-time converter and you will get correct answers for the base 8 and base 16 conversions as well. Just enter any value and get started using our tool.</p><br>
-          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 710px;"><br>
+          <p>To use this binary to hex converter, enter the binary number into this text field and click on the button, "Binary to Hexadecimal", you will get the answer for the equivalent hexadecimal number of the binary number. Enter the value "101011111" in the box and you will get the answer of "15F" as the answer.</p><br>
+          <div class="w3-hover-shadow w3-panel w3-leftbar w3-light-grey" style="height: 400px;"><br><br>
           <input type="text" id="text_value" style="width: 100%" class="w3-border w3-padding-large w3-padding-32 w3-center" placeholder="Enter a value"/><br><br>
-          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="bintodec(); bintooct(); bintohex();" style="width: 49%">Binary to Decimal</button>
-          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="reset()" style="width: 49%">clear all the fields</button><br><br>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans"></b></p>
-            <h3><b>to base-8</b></h3>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans2"></b></p>
-            <h3><b>to base-16</b></h3>
-            <p class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; overflow: scroll">Conversion:<b id="ans1"></b></p>
-          </div>
+          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="bintohex()">Binary to Hexadecimal</button>
+          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="hextobin()">Hexadecimal to Binary</button>
+          <button class="w3-button w3-border w3-teal w3-padding-large w3-hover-gray" onclick="reset()">Reset Fields</button><br><br>
+          <div class="w3-border w3-padding-large w3-padding-32 w3-right" style="width: 100%; height: 110px; overflow: scroll;"><p>Conversion:<b id="ans"></b></b> </div><br><br>
+        </div>
         </div><br>
         <div class="w3-third w3-container">
           <h3 style="background-color: silver;">Other Useful Tools</h3>
@@ -137,109 +127,108 @@ table, th, td {
       </div>
       <div class="w3-row" style="text-align: justify;">
         <div class="w3-twothird w3-container">
-            <h2 class="w3-text-teal">Binary to Decimal Conversion</h2>
-            <p>If you want to convert binary to decimal, the decimal number is nothing but the sum of the given binary digits, (Xn) times the power of 2.<p><br>
-              <p>
-              decimal number = x0×20 + x1×21 + x2×22 + ...
-            </p>
-            <p>
-              So, it is the conversion formula, you can also use our tool. Just enter a binary number like "10001010111000" and the answer you get will be "10001010111000".
-            </p><br>
-            <h2 class="w3-text-teal">Binary to Decimal Conversion Table</h2>
-            <table style="width:25%">
-              <tbody>
-    <tr>
-      <th>Binary</th>
-      <th>Decimal</th>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>100</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>101</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>110</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>111</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>1000</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>1001</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>1010</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>1011</td>
-      <td>11</td>
-    </tr>
-     <tr>
-      <td>1100</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>1101</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td>1110</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>1111</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>10000</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>10001</td>
-      <td>17</td>
-    </tr>
-     <tr>
-      <td>10010</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <td>10011</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>10100</td>
-      <td>20</td>
-    </tr>
+          <h1 class="w3-text-teal">Hexadecimal Numbers</h1>
+          <p>The hexadecimal is a base-16 numbering system. The hexadecimal numbers are nothing but 0-9 and then use A to F. The conversion of binary to hex numbers is simple. You can either use our tool or perform the conversion operation by yourself.</p>
+          <p>The hexadecimal numbers are the modern way to show binary numbers to computer systems. When showing the content from computer storage, one hexadecimal number can show the representation of four various binary numbers. Two hexadecimal numbers can represent eight binary digits and so on.</p>
+          <p>You can have a look at different values of hex numbers along with zeros and one in the table below!</p>
+          <h2 class="w3-text-teal">How to convert binary to hexadecimal?</h2>
+          <article>
+            As we all know, binary numbers are only zeros and ones, and no other number can be placed in the place of these numbers. Where hexadecimal numbers contain either 0-9 numbers or A-F letters. Apart from that, hexadecimal is base - 16, it possible to convert binary to hex number but the only condition required is you need at least four base-2 numbers to make any kind of conversion. To convert binary to hexadecimal, you need to the binary into group of 4 and process those four numbers to get desired the result. You can also use our tool to get an accurate answer.
+          </article><br>
+          <table style="width:25%">
+            <tbody>
+  <tr>
+    <th>Hex</th>
+    <th>Binary</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>101</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>110</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>111</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>1000</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>1001</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>1010</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>1011</td>
+  </tr>
+   <tr>
+    <td>C</td>
+    <td>1100</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>1101</td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>1110</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>1111</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>10000</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>100000</td>
+  </tr>
+   <tr>
+    <td>40</td>
+    <td>1000000</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>10000000</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>100000000</td>
+  </tr>
   </tbody>
-  </table><br>
+</table><br>
         </div>
-          </div>
+      </div>
           <footer id="myFooter">
         <div class="w3-container w3-theme-l2 w3-padding-32">
           <h4>© 2021</h4>
